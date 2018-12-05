@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_05_144030) do
+ActiveRecord::Schema.define(version: 2018_12_05_154916) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,9 @@ ActiveRecord::Schema.define(version: 2018_12_05_144030) do
     t.datetime "updated_at", null: false
     t.string "body_zone"
     t.string "skin_type"
+    t.string "fullness"
+    t.string "ethnicity"
+    t.string "sexe"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -33,15 +36,8 @@ ActiveRecord::Schema.define(version: 2018_12_05_144030) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "photo"
-  end
-
-  create_table "recognitions", force: :cascade do |t|
-    t.bigint "product_id"
-    t.bigint "profile_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_recognitions_on_product_id"
-    t.index ["profile_id"], name: "index_recognitions_on_profile_id"
+    t.string "body_zone"
+    t.string "skin_type"
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,6 +52,4 @@ ActiveRecord::Schema.define(version: 2018_12_05_144030) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "recognitions", "products"
-  add_foreign_key "recognitions", "profiles"
 end
