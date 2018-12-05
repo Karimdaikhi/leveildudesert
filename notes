@@ -1,0 +1,14 @@
+# // Cloudinary
+# Pousser en prod avec herku (voir le cours)
+
+# Linker l'url à clarifai sans le photo uploader et model
+
+# photo uploader pour la création de produit ? non on fait des seeds
+
+# // CLARIFAI
+
+# Clarifai::Rails::Detector.new(image_url).image
+
+#   ou
+
+# Clarifai::Rails::Detector.new(image_url, model_code).image
