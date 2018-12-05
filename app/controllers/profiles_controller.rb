@@ -6,6 +6,8 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile).permit(:age, :sexe, :ethnicity)
+    params.require(:profile).permit(:age, :sexe, :ethnicity, :skin_type, :body_type)
   end
+
+
 end
