@@ -1,0 +1,40 @@
+
+<h1>DIAGNOSTIC</h1>
+
+<p> Age le plus probable : <%= @profile.age %></p>
+<p>Probabilité: <%= session[:ages][0]["value"] %></p>
+<br>
+<p>2ème Age le plus probable : <%= session[:ages][1]["name"] %></p>
+<p>Probabilité: <%= session[:ages][1]["value"] %></p>
+<br>
+<p>3ème Age le plus probable : <%= session[:ages][2]["name"] %></p>
+<p>Probabilité: <%= session[:ages][2]["value"] %></p>
+
+<br><br>
+
+<p>Sexe le plus probable : <%= @h[@profile.sexe.to_sym] %></p>
+<p>Probabilité: <%= session[:sexes][0]["value"] %></p>
+<br>
+<p>2ème Sexe le plus probable : <%= @h[session[:sexes][1]["name"].to_sym] %></p>
+<p>Probabilité: <%= session[:sexes][1]["value"] %></p>
+
+<br><br>
+
+<p>Ethnicité la plus probable : <%= @h[@profile.ethnicity.to_sym] %></p>
+<p>Probabilité: <%= session[:ethnicities][0]["value"] %></p>
+<br>
+<p>2ème Ethnicité la plus probable : <%= @h[session[:ethnicities][1]["name"].to_sym] %></p>
+<p>Probabilité: <%= session[:ethnicities][1]["value"] %></p>
+<br>
+<p>3ème Ethnicité la plus probable : <%= @h[session[:ethnicities][2]["name"].to_sym] %></p>
+<p>Probabilité: <%= session[:ethnicities][2]["value"] %></p>
+
+<br> <br>
+
+<%= simple_form_for @profile, :url => profile_complete_path, :method => :post  do |f| %>
+  <!-- [...] -->
+  <%= f.input :body_zone %>
+  <%= f.input :skin_type %>
+  <%= f.button :submit, class: 'btn-yours' %>
+  <!-- [...] -->
+<% end %>
