@@ -6,6 +6,5 @@ Rails.application.routes.draw do
   post '/profile_photo', to: 'profiles#profile_photo'
   get '/diagnostic', to: 'profiles#diagnostic', as: :diagnostic
   patch '/profile_complete', to: 'profiles#update'
-  get '/results', to: 'profiles#results'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
