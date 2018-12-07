@@ -1,7 +1,11 @@
+
+
 <%= simple_form_for @profile, :url => profile_photo_path, :method => :post  do |f| %>
+
   <!-- [...] -->
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
   <%= f.button :submit, class: 'btn-yours' %>
   <!-- [...] -->
 <% end %>
+
