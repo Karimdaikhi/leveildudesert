@@ -81,13 +81,17 @@ class ProfilesController < ApplicationController
   end
 
   def results
-    # matcher le profil avec les produits
-    # if @profile.age < 40
-    #   age_profile = 'Jeune'
-    # else
-    #   age_profile = 'Vieux'
-    # end
-    # Product.where(sexe: profile.sexe, fullness: profile.age, ethnicity: profile.ethnicity, skin_type: profile.skin_type, body_zone: profile.body_zone )
+
+    @profile = Profile.last
+
+    if @profile.age < 40
+      age_profile = 'Jeune'
+    else
+      age_profile = 'Vieux'
+    end
+
+    @products = Product.where(sexe: profile.sexe, fullness: age_profile, ethnicity: profile.ethnicity, skin_type: profile.skin_type, body_zone: profile.body_zone )
+
   end
 
   private
