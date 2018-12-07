@@ -103,8 +103,10 @@ class ProfilesController < ApplicationController
       age_profile = 'Vieux'
     end
 
-    @products = Product.where(sexe: @profile.sexe, fullness: age_profile, ethnicity: @profile.ethnicity, skin_type: @profile.skin_type, body_zone: @profile.body_zone )
-
+    @products = Product.where(sexe: @profile.sexe, fullness: age_profile, ethnicity: @profile.ethnicity, skin_type: @profile.skin_type, body_zone: @profile.body_zone)
+    puts "######"
+    puts @products.inspect
+    puts @profile.body_zone
   end
 
   private
