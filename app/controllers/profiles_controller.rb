@@ -73,7 +73,8 @@ class ProfilesController < ApplicationController
   end
 
   def update
-    if @profile.save
+    @profile = Profile.last
+    if @profile.update(profile_params)
       redirect_to results_path
     else
       render 'profile/diagnostic'
@@ -84,13 +85,25 @@ class ProfilesController < ApplicationController
 
     @profile = Profile.last
 
+    @h = {
+      'black or african american'.to_sym => 'Noir ou Afro-américain',
+      'middle eastern or north african'.to_sym =>'Moyen orient ou Afrique du nord',
+      'white'.to_sym =>'Blanc',
+      'asian'.to_sym =>'Asiatique',
+      'hispanic, latino, or spanish origin'.to_sym =>'Hispanique, latino ou espagnole',
+      'native hawaiian or pacific islander'.to_sym =>"Natif d'Hawaï ou d'autres îles du Pacifique",
+      'american indian or alaska native'.to_sym =>"Amérindien ou natif de l'Alaska",
+      'feminine'.to_sym =>'Femme',
+      'masculine'.to_sym =>'Homme'
+    }
+
     if @profile.age < 40
       age_profile = 'Jeune'
     else
       age_profile = 'Vieux'
     end
 
-    @products = Product.where(sexe: profile.sexe, fullness: age_profile, ethnicity: profile.ethnicity, skin_type: profile.skin_type, body_zone: profile.body_zone )
+    @products = Product.where(sexe: @profile.sexe, fullness: age_profile, ethnicity: @profile.ethnicity, skin_type: @profile.skin_type, body_zone: @profile.body_zone )
 
   end
 

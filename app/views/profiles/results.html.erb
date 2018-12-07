@@ -1,0 +1,21 @@
+<h1>RESULTATS</h1>
+
+<p> Votre âge : <%= @profile.age %></p>
+<p>Votre sexe : <%= @h[@profile.sexe.to_sym] %></p>
+<p>Votre ethnicité : <%= @h[@profile.ethnicity.to_sym] %></p>
+<p> Votre type de peau : <%= @profile.skin_type %></p>
+<p> Votre choix de zone du corps: <%= @profile.body_zone %></p>
+
+<br><br>
+
+<h1>PRODUIT(S)</h1>
+<% @products.each do |product| %>
+<%= product.photo %>
+<%= product.name %>
+<%= product.description %>
+<%= product.price %>
+<% end %>
+
+
+
+
