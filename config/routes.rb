@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'products#index'
-  resources :products, only: [:show, :update]
+  resources :products, only: [:show, :edit, :update]
+  get '/products', to: 'products#products'
   post '/profile_photo', to: 'profiles#profile_photo'
   get '/diagnostic', to: 'profiles#diagnostic', as: :diagnostic
   patch '/profile_complete', to: 'profiles#update'
