@@ -1,6 +1,10 @@
 class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
+  def products
+    @products = Product.all
+  end
+
   def index
     @profile = Profile.new
 
@@ -16,14 +20,19 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def edit
+    @product = Product.find(params[:id])
+  end
+
   def update
+    @product.save
   end
 
   # private
 
-  # def product_params
-  #   params.require(:product).permit(:name, :description, :price, :photo, :skin_type, :body_zone, :fullness, :sexe, :ethnicity)
-  # end
+  def product_params
+    params.require(:product).permit(:name, :description, :price, :photo, :skin_type, :body_zone, :fullness, :sexe, :ethnicity)
+  end
 
   # def profile_params
   #   params.require(:profile).permit(:photo)
