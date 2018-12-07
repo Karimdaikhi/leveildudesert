@@ -1,1 +1,71 @@
 
+.card {
+ position: relative;
+  height: 250px;
+  background: linear-gradient(-225deg, rgba(30,30,30,0.6) 30%, rgba(46,46,46,0.5) 80%), url("http://unsplash.it/400/300/?random");
+  background-size: cover;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.card-user {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.card-category {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+}
+
+.epicard {
+position: relative;
+margin-bottom: 30px;
+width: 352px;
+height: 400px;
+background-color: #fef7df;
+text-align: center;
+
+}
+
+.epicard-image {
+position: relative;
+transform: translateY(30%);
+top: 50%;
+width: 104px;
+height: 229px;
+}
+
+.product-description {
+  flex: 1 0 auto;
+  padding: 0px !important;
+  text-align: center;
+}
+
+
+
+.epicard-image-pot {
+position: relative;
+transform: translateY(142%);
+top: 50%;
+width: 151px;
+height: 124px;
+text-align: center;
+
+}
+
+.box {
+  transition: box-shadow .3s;
+
+
+
+}
+.box:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
