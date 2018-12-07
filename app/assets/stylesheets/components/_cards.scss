@@ -1,1 +1,47 @@
 
+
+.epicard {
+position: relative;
+margin-bottom: 30px;
+
+height: 400px;
+background-color: #fef7df;
+text-align: center;
+
+}
+
+.epicard-image {
+position: relative;
+transform: translateY(30%);
+top: 50%;
+width: 104px;
+height: 229px;
+}
+
+.product-description {
+  flex: 1 0 auto;
+  padding: 0px !important;
+  text-align: center;
+}
+
+
+
+.epicard-image-pot {
+position: relative;
+transform: translateY(142%);
+top: 50%;
+width: 151px;
+height: 124px;
+text-align: center;
+
+}
+
+.box {
+  transition: box-shadow .3s;
+
+
+
+}
+.box:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}

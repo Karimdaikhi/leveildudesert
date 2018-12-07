@@ -1,8 +1,12 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <div class= "navbar-wagon-brand">
+    <%= link_to root_path do %>
     <%= image_tag "logo2.png", height: 50 %>
   </div>
+  <% end %>
+
+
   <!-- Right Navigation -->
   <div class="item-navbar">
     <% if user_signed_in? %>
@@ -12,7 +16,7 @@
     <%= image_tag "cart-simple.svg", height: 30 %>
      <% end %>
   </div>
-
+<% end %>
 
 
 
@@ -22,9 +26,8 @@
 
 
   <div class="menu-navbar">
-    <%= link_to "NOS PRODUITS", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "NOS PRODUITS", products_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "VOTRE DIAGNOSTIC", "#", class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "LA MAISON", "#", class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "BLOG", "#", class: "navbar-wagon-item navbar-wagon-link" %>
   </div>
-
