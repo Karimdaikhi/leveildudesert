@@ -1,6 +1,17 @@
 <div class="container marged-top" >
   <div class="row">
     <div class="col-xs-12 col-sm-6">
+      <div class="produt-show">
+        <%= image_tag @product.photo %>
+
+    <div class="button-position">
+      <h3 ><%= @product.name.upcase %></h3>
+      <br>
+      <p><%= @product.price %> €</p>
+      <br>
+      <a href="#" class="btn-medium">EN SAVOIR PLUS</a>
+    </div>
+    </div>
 
     </div>
     <div class="col-xs-12 col-sm-6">
