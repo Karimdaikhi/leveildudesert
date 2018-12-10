@@ -3,7 +3,6 @@
 .epicard {
 position: relative;
 margin-bottom: 30px;
-
 height: 400px;
 background-color: #fef7df;
 text-align: center;
@@ -24,8 +23,6 @@ height: 229px;
   text-align: center;
 }
 
-
-
 .epicard-image-pot {
 position: relative;
 transform: translateY(142%);
@@ -38,10 +35,28 @@ text-align: center;
 
 .box {
   transition: box-shadow .3s;
-
-
-
 }
+
 .box:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
+
+.produt-show {
+position: relative;
+text-align: center;
+width: 100%;
+height: 715px;
+background-color: #fef7df;
+margin-left: -44px !important;
+}
+
+.produt-show img {
+position: relative;
+text-align: center;
+transform: translateY(80%);
+}
+
+.produt-text p, h4, h3 {
+text-align: center;
+}
+
