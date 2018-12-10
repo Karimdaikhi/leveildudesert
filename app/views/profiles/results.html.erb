@@ -10,7 +10,7 @@
 
 <h1>PRODUIT(S)</h1>
 <% @products.each do |product| %>
-<%= product.photo %>
+<%= image_tag product.photo %>
 <%= product.name %>
 <%= product.description %>
 <%= product.price %>
