@@ -1,123 +1,21 @@
-
-<h3> NOS PRODUITS </h3>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-4">
-            <div class="epicard box">
-              <%= image_tag "huile.png", class: "epicard-image" %>
-
-              <div class="button-position">
-                <a href="#" class="btn-medium">EN SAVOIR PLUS</a>
-              </div>
-            </div>
-            <div class="product-description">
-              <h4>HUILE DE PEPIN DE FIGUES</h4>
-              <p>50ml</p>
+<h1> NOS PRODUITS </h1>
+<div class="container">
+  <div class="row">
+    <% @products.each do |p| %>
+      <div class="col-xs-12 col-sm-4">
+        <%= link_to p do  %>
+          <div class="epicard box">
+            <%= image_tag p.photo, class: "epicard-image" %>
+            <div class="button-position">
+              <a href="#" class="btn-medium">EN SAVOIR PLUS</a>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12 col-sm-4">
-              <div class="epicard box">
-                 <%= image_tag "petite_creme.png", class: "epicard-image" %>
-                <div class="button-position">
-                  <a href="#" class="btn-medium">EN SAVOIR PLUS</a>
-                </div>
-              </div>
-              <div class="product-description">
-                <h4>HUILE DE PEPIN DE FIGUES</h4>
-                <p>50ml</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12 col-sm-4">
-                <div class="epicard box">
-                 <%= image_tag "pot_creme.png", class: "epicard-image-pot" %>
-                  <div class="button-position-pot">
-                    <a href="#" class="btn-medium">EN SAVOIR PLUS</a>
-                  </div>
-                </div>
-                <div class="product-description">
-                  <h4>HUILE DE PEPIN DE FIGUES</h4>
-                  <p>50ml</p>
-                </div>
-              </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-xs-12 col-sm-4">
-                    <div class="epicard box">
-                       <%= image_tag "grande_creme.png", class: "epicard-image" %>
-                      <div class="button-position">
-                        <a href="#" class="btn-medium">EN SAVOIR PLUS</a>
-                      </div>
-                    </div>
-                    <div class="product-description">
-                      <h4>HUILE DE PEPIN DE FIGUES</h4>
-                      <p>50ml</p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-4">
-                      <div class="epicard box" >
-                        <%= image_tag "huile.png", class: "epicard-image" %>
-                        <div class="button-position">
-                          <a href="#" class="btn-medium">EN SAVOIR PLUS</a>
-                        </div>
-                      </div>
-                      <div class="product-description">
-                        <h4>HUILE DE PEPIN DE FIGUES</h4>
-                        <p>50ml</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-xs-12 col-sm-4">
-                        <div class="epicard box">
-                         <%= image_tag "pot_creme.png", class: "epicard-image-pot" %>
-                          <div class="button-position-pot">
-                            <a href="#" class="btn-medium">EN SAVOIR PLUS</a>
-                          </div>
-                        </div>
-                        <div class="product-description">
-                          <h4>HUILE DE PEPIN DE FIGUES</h4>
-                          <p>50ml</p>
-                        </div>
-                      </div>
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4">
-                            <div class="epicard box">
-                              <%= image_tag "huile.png", class: "epicard-image" %>
-                              <div class="button-position">
-                                <a href="#" class="btn-medium">EN SAVOIR PLUS</a>
-                              </div>
-                            </div>
-                            <div class="product-description">
-                              <h4>HUILE DE PEPIN DE FIGUES</h4>
-                              <p>50ml</p>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-xs-12 col-sm-4">
-                              <div class="epicard box">
-                                <%= image_tag "pot_creme.png", class: "epicard-image-pot" %>
-                                <div class="button-position-pot">
-                                  <a href="#" class="btn-medium">EN SAVOIR PLUS</a>
-                                </div>
-                              </div>
-                              <div class="product-description">
-                                <h4>HUILE DE PEPIN DE FIGUES</h4>
-                                <p>50ml</p>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-xs-12 col-sm-4">
-                                <div class="epicard box">
-                                  <%= image_tag "pot_creme.png", class: "epicard-image-pot" %>
-                                  <div class="button-position-pot">
-                                    <a href="#" class="btn-medium">EN SAVOIR PLUS</a>
-                                  </div>
-                                </div>
-                                <div class="product-description">
-                                  <h4>HUILE DE PEPIN DE FIGUES</h4>
-                                  <p>50ml</p>
-                                </div>
-                              </div>
+          <div class="product-description">
+            <h4><%= p.name.capitalize %></h4>
+            <p><%= p.price %> €</p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

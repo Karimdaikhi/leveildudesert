@@ -1,7 +1,7 @@
 require "csv"
 
 class ProductsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show, :products]
 
   def products
     @products = Product.all
