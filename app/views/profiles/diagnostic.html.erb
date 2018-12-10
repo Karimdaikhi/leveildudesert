@@ -2,6 +2,9 @@
 <h1>DIAGNOSTIC</h1>
 <br> <br>
 
+<%=  cl_image_tag @profile.photo, class: "profilephoto" %>
+<br><br>
+
 <p><b><%= @h[@profile.sexe.to_sym] %>, Probabilité: <%= session[:sexes][0]["value"] %></b></p>
 <p><%= @h[session[:sexes][1]["name"].to_sym] %>, Probabilité: <%= session[:sexes][1]["value"] %></p>
 
@@ -20,10 +23,12 @@
 <br><br>
 
 <%= simple_form_for @profile, :url => profile_complete_path, :method => :patch  do |f| %>
-<%= f.input :body_zone, collection: ['Visage','Corps','Mains','Buste'], :input_html => { :class => 'select2' } %>
-<%= f.input :skin_type, collection: ['Peau sèche','Peau normale','Peau grasse ','Peau mature'], :input_html => { :class => 'select2' }  %>
+<%= f.input :body_zone, label: 'Je cherche un soin pour :', collection: ['Visage','Corps','Mains','Buste'], :input_html => { :class => 'select2',} %>
+<%= f.input :skin_type, label: 'Quel est votre type de peau ?',collection: ['Peau sèche','Peau normale','Peau grasse','Peau mature'], :input_html => { :class => 'select2' }  %>
 
-<%= f.button :submit, class: 'btn-yours' %>
+<%= f.button :submit, "Charger votre profil", class: 'btn-yours' %>
 <% end %>
+
+
 
 
