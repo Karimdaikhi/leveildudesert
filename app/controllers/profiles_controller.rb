@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:new, :profile_photo, :call_api, :diagnostic, :results]
+  skip_before_action :authenticate_user!, only: [:new, :profile_photo, :call_api, :diagnostic, :update, :results]
 
 
   def profile_photo
