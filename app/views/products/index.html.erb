@@ -24,7 +24,7 @@
       <div class="right-card">
         <div class="right-card-content">
           <h1>NOUVEAUTÉ</h1>
-          <p>Trouvez votre produit via un diagnostic personnalisé. Veuillez télécharger une photo depuis votre ordinateur.<br><br></p>
+          <p>Trouvez votre soin adapté grâce à notre diagnostic. <br> Ajoutez votre plus beau selfie.<br><br></p>
           <%= simple_form_for @profile, :url => profile_photo_path, :method => :post  do |f| %>
             <%= f.input :photo, label: "Charger ma photo" %>
             <%= f.input :photo_cache, as: :hidden %>
