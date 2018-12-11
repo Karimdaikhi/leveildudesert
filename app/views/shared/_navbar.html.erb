@@ -1,5 +1,4 @@
 <div class="navbar-wagon">
-  <!-- Logo -->
   <div class= "navbar-wagon-brand">
     <%= link_to root_path do %>
       <%= image_tag "logo2.png", height: 50 %>
@@ -7,40 +6,28 @@
   </div>
 
 
-  <!-- Right Navigation -->
   <div class="item-navbar">
-    <!-- Links when logged in -->
-
-
     <%= image_tag "zoom-2.svg", height: 30 %>
     <%= image_tag "single-01.svg", height: 30 %>
     <%= image_tag "cart-simple.svg", height: 30 %>
-
-
     <%= form_tag products_path, method: :get do %>
-    <%= text_field_tag :query,
+      <%= text_field_tag :query,
       params[:query],
       class: "form-control", class: "search",
       placeholder: "Recherchez un soin"%>
-     <% end %>
-
+    <% end %>
   </div>
 
   <div class="language">
     <%= "Français"  %>
     <%= image_tag "fleche.svg", height: 30 %>
-
   </div>
-
-
-
   <div class="menu-navbar">
     <%= link_to "NOS PRODUITS", products_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "VOTRE DIAGNOSTIC", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "VOTRE DIAGNOSTIC", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "LA MAISON", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "BLOG", "#", class: "navbar-wagon-item navbar-wagon-link" %>
   </div>
- </div>
+</div>
 
 
 
