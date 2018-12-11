@@ -1,3 +1,16 @@
 // .marged-top {
 //   margin-top : 0.5rem;
 // }
+
+.full-height-container {
+height: calc(100vh - 182px);
+}
+
+.full-height {
+  height: 100%;
+}
+
+.non-padded {
+  padding-left: 0;
+  padding-right: 0;
+}
