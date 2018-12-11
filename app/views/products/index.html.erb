@@ -14,7 +14,7 @@
               <br>
               <p><%= @product.price %> €</p>
               <br>
-              <%= link_to 'EN SAVOIR PLUS', @product, class:"btn-medium" %>
+              <%= link_to 'Découvrir', @product, class:"btn-medium" %>
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@
           <%= simple_form_for @profile, :url => profile_photo_path, :method => :post  do |f| %>
             <%= f.input :photo, label: "Charger ma photo" %>
             <%= f.input :photo_cache, as: :hidden %>
-            <%= f.button :submit, "GO !", class: 'btn-medium' %>
+            <%= f.button :submit, "C'est parti !", class: 'btn-medium' %>
           <% end %>
         </div>
       </div>
