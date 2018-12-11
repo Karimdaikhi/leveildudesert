@@ -1,3 +1,59 @@
+
+.right-card, .left-card {
+width: 100%;
+height: 100%;
+}
+
+.right-card {
+  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), asset-url('desert.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+.right-card-content {
+  width: 60%;
+  text-align: center;
+  background-color: white;
+  border: 1px solid black;
+  padding: 3rem;
+}
+
+
+.product-star-picture {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 1rem;
+
+}
+
+.product-star-picture img {
+  max-height: 40%;
+  max-width: 100%;
+
+}
+.product-star-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-right: 15%;
+  padding-left: 1rem;
+}
+
+#title-star-product {
+  text-align: left;
+
+}
+
 .epicard {
 position: relative;
 margin-bottom: 30px;
