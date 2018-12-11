@@ -109,9 +109,28 @@ margin-left: -44px !important;
 position: relative;
 text-align: center;
 transform: translateY(80%);
+max-width: 300px;
+max-height: 300px;
 }
 
 .produt-text p, h4, h3 {
 text-align: center;
+}
+
+.right-card-all-products {
+
+  justify-content: center;
+  align-items: center;
+  // color: white;
+  background-position: center;
+}
+
+.right-card-content-all-products {
+  max-width: 100%;
+
+  text-align: center;
+  background-color: white;
+
+  padding: 3rem;
 }
 
