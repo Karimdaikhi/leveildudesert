@@ -5,6 +5,11 @@ class ProductsController < ApplicationController
 
   def products
     @products = Product.all
+    if params[:query].present?
+      @products = Product.search_by_title(params[:query])
+    else
+      @products = Product.all
+    end
   end
 
   def index
@@ -13,11 +18,7 @@ class ProductsController < ApplicationController
     @profile = Profile.new
 
     @products = Product.all
-    if params[:query].present?
-      @products = Product.search_by_title_and_description(params[:query])
-    else
-      @products = Product.all
-    end
+
   end
 
   def show
@@ -35,7 +36,7 @@ class ProductsController < ApplicationController
   # private
 
   def product_params
-    params.require(:product).permit(:name, :description, :price, :photo, :skin_type, :body_zone, :fullness, :sexe, :ethnicity)
+    params.require(:product).permit(:name, :description, :price, :photo, :skin_type, :body_zone, :fullness, :sexe, :ethnicity, :query)
   end
 
   # def profile_params
