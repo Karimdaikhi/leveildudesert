@@ -10,7 +10,7 @@
           </div>
           <div class="col-xs-12 col-sm-6 non-padded full-height">
             <div class="product-star-content">
-              <h3 id="title-star-product">Vous êtes splendide!</h3>
+              <h3 id="title-star-product">VOUS ÊTES SPLENDIDE !</h3>
             <br>
             <p>
             Notre outil de reconnaissance faciale a effectué l'analyse de votre photo.  </p>
@@ -38,7 +38,7 @@
           <%= simple_form_for @profile, :url => profile_complete_path, :method => :patch  do |f| %>
             <%= f.input :body_zone, label: 'Je cherche un soin pour :', collection: ['Visage','Corps','Mains','Buste'], :input_html => { :class => 'select2',} %>
             <%= f.input :skin_type, label: 'Quel est votre type de peau ?',collection: ['Peau sèche','Peau normale','Peau grasse','Peau mature'], :input_html => { :class => 'select2' }  %>
-            <%= f.button :submit, "Charger votre profil", class: 'btn-yours' %>
+            <%= f.button :submit, "Charger votre profil", class: 'btn-medium' %>
           <% end %>
         </div>
       </div>
