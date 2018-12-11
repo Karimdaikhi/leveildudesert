@@ -1,19 +1,40 @@
-<h1>Ma prescription beauté personnalisée</h1>
-<p>Vous êtes  un(e) <b><%= @h[@profile.sexe.to_sym] %></b> de <b><%= @profile.age %></b> ans
-<p>Votre ethnicité : <b><%= @h[@profile.ethnicity.to_sym] %></b></p>
-<p> Votre type de peau : <b><%= @profile.skin_type %></b></p>
-<p> Vous recherchez un soin pour votre  <b><%= @profile.body_zone %></b></p>
-
-<br><br>
-
-<h1>Mon soin</h1>
-<% @products.each do |product| %>
-<%= image_tag product.photo %>
-<%= product.name %>
-<%= product.description %>
-<%= product.price %> €
-<% end %>
-
+<div class="container-fluid full-height-container">
+  <div class="row non-padded full-height">
+    <div class="col-xs-12 col-sm-6 non-padded full-height">
+      <div class="left-card left-card-result">
+      <% @products.each do |product| %>
+        <div class="row non-padded almost-full-height">
+          <div class="col-xs-12 col-sm-6 non-padded full-height">
+            <div class="result-star-picture">
+            <%= image_tag product.photo %>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 non-padded full-height">
+            <div class="product-star-content">
+            <h3 id="title-star-product"><%= product.name %></h3>
+            <br>
+            <p><%= product.price %> €</p>
+            <br>
+            <%= link_to 'EN SAVOIR PLUS', product, class:"btn-medium" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 non-padded full-height">
+      <div class="right-card">
+        <div class="right-card-content diagnostic">
+         <h3 id="title-diagnostic">Ma prescription beauté personnalisée</h1>
+         <p>Vous êtes  un(e) <b><%= @h[@profile.sexe.to_sym] %></b> de <b><%= @profile.age %></b> ans
+         <p>Votre ethnicité : <b><%= @h[@profile.ethnicity.to_sym] %></b></p>
+         <p> Votre type de peau : <b><%= @profile.skin_type %></b></p>
+         <p> Vous recherchez un soin pour votre  <b><%= @profile.body_zone %></b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
