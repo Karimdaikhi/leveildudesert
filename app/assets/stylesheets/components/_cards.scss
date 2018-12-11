@@ -115,3 +115,20 @@ transform: translateY(80%);
 text-align: center;
 }
 
+.right-card-all-products {
+
+  justify-content: center;
+  align-items: center;
+  // color: white;
+  background-position: center;
+}
+
+.right-card-content-all-products {
+  max-width: 100%;
+
+  text-align: center;
+  background-color: white;
+
+  padding: 3rem;
+}
+
