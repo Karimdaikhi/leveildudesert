@@ -1,19 +1,17 @@
-<h1>RESULTATS</h1>
-
-<p> Votre âge : <%= @profile.age %></p>
-<p>Votre sexe : <%= @h[@profile.sexe.to_sym] %></p>
-<p>Votre ethnicité : <%= @h[@profile.ethnicity.to_sym] %></p>
-<p> Votre type de peau : <%= @profile.skin_type %></p>
-<p> Votre choix de zone du corps: <%= @profile.body_zone %></p>
+<h1>Ma prescription beauté personnalisée</h1>
+<p>Vous êtes  un(e) <b><%= @h[@profile.sexe.to_sym] %></b> de <b><%= @profile.age %></b> ans
+<p>Votre ethnicité : <b><%= @h[@profile.ethnicity.to_sym] %></b></p>
+<p> Votre type de peau : <b><%= @profile.skin_type %></b></p>
+<p> Vous recherchez un soin pour votre  <b><%= @profile.body_zone %></b></p>
 
 <br><br>
 
-<h1>PRODUIT(S)</h1>
+<h1>Mon soin</h1>
 <% @products.each do |product| %>
 <%= image_tag product.photo %>
 <%= product.name %>
 <%= product.description %>
-<%= product.price %>
+<%= product.price %> €
 <% end %>
 
 
