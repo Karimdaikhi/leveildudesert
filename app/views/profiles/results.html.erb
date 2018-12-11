@@ -1,7 +1,7 @@
 <div class="container-fluid full-height-container">
   <div class="row non-padded full-height">
     <div class="col-xs-12 col-sm-6 non-padded full-height">
-      <div class="left-card left-card-result">
+      <div class="left-card left-card-result result-background">
       <% @products.each do |product| %>
         <div class="row non-padded almost-full-height">
           <div class="col-xs-12 col-sm-6 non-padded full-height">
@@ -15,7 +15,7 @@
             <br>
             <p><%= product.price %> €</p>
             <br>
-            <%= link_to 'EN SAVOIR PLUS', product, class:"btn-medium" %>
+            <%= link_to 'Découvrir', product, class:"btn-medium" %>
             </div>
           </div>
         </div>
