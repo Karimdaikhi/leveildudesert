@@ -7,11 +7,24 @@
   </div>
 
 
+  <!-- Right Navigation -->
+  <div class="item-navbar">
+    <!-- Links when logged in -->
 
- <div class="item-navbar">
+
     <%= image_tag "zoom-2.svg", height: 30 %>
     <%= image_tag "single-01.svg", height: 30 %>
     <%= image_tag "cart-simple.svg", height: 30 %>
+
+
+    <%= form_tag products_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control", class: "search",
+      placeholder: "Recherchez un soin"%>
+        <% end %>
+     <% end %>
+
   </div>
 
   <div class="language">

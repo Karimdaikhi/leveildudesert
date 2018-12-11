@@ -9,4 +9,10 @@ class Product < ApplicationRecord
   #validates :sexe, presence: true
   #validates :ethnicity, presence: true
   #validates :sku, presence: true
+  include PgSearch
+  pg_search_scope :search_by_title,
+    against: [:name],
+    using: {
+      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+    }
 end
