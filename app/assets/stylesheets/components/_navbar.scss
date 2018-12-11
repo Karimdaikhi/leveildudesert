@@ -53,7 +53,7 @@ text-align: right;
 /* Navbar link */
 .navbar-wagon-link {
   color: black;
-  font-size: 12px;
+  font-size: 14px;
 }
 .navbar-wagon-link:hover {
   text-decoration: none;
@@ -65,6 +65,17 @@ a
 {
   text-decoration: none;
 
+}
+
+.search {
+  text-align: left;
+  float: right;
+  padding: 0px;
+  border: none;
+  margin-top: -28px;
+  margin-right: 115px;
+  font-size: 17px;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
 }
 /* Dropdown menu */
 /* .navbar-wagon-dropdown-menu {

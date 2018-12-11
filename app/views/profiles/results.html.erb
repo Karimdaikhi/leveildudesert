@@ -25,18 +25,16 @@
     <div class="col-xs-12 col-sm-6 non-padded full-height">
       <div class="right-card">
         <div class="right-card-content diagnostic">
-          <h3 id="title-diagnostic">VOICI VOS PRODUITS ADAPTÉS !</h1>
-          <p>Votre âge : <%= @profile.age %></p>
-          <p>Votre sexe : <%= @h[@profile.sexe.to_sym] %></p>
-          <p>Votre ethnicité : <%= @h[@profile.ethnicity.to_sym] %></p>
-          <p>Votre type de peau : <%= @profile.skin_type %></p>
-          <p>Votre choix de zone du corps: <%= @profile.body_zone %></p>
+         <h3 id="title-diagnostic">Ma prescription beauté personnalisée</h1>
+         <p>Vous êtes  un(e) <b><%= @h[@profile.sexe.to_sym] %></b> de <b><%= @profile.age %></b> ans
+         <p>Votre ethnicité : <b><%= @h[@profile.ethnicity.to_sym] %></b></p>
+         <p> Votre type de peau : <b><%= @profile.skin_type %></b></p>
+         <p> Vous recherchez un soin pour votre  <b><%= @profile.body_zone %></b></p>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 
 
 
