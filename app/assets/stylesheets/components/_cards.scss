@@ -1,7 +1,10 @@
-
 .right-card, .left-card {
 width: 100%;
 height: 100%;
+}
+
+.left-card-result {
+  overflow-y: scroll;
 }
 
 .right-card {
@@ -22,6 +25,17 @@ height: 100%;
   padding: 3rem;
 }
 
+.diagnostic {
+  line-height: 10px;
+  text-align: left;
+  width: 80%;
+  padding: 4rem;
+}
+
+#title-diagnostic {
+  padding-top: 0px;
+  margin-top: 0px;
+}
 
 .product-star-picture {
   height: 100%;
@@ -30,7 +44,6 @@ height: 100%;
   justify-content: end;
   align-items: center;
   padding-right: 1rem;
-
 }
 
 .product-star-picture img {
@@ -38,6 +51,22 @@ height: 100%;
   max-width: 100%;
 
 }
+
+.result-star-picture {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.result-star-picture img {
+  max-height: 60%;
+  max-width: 100%;
+}
+
+
 .product-star-content {
   height: 100%;
   width: 100%;
@@ -109,9 +138,28 @@ margin-left: -44px !important;
 position: relative;
 text-align: center;
 transform: translateY(80%);
+max-width: 300px;
+max-height: 300px;
 }
 
 .produt-text p, h4, h3 {
 text-align: center;
+}
+
+.right-card-all-products {
+
+  justify-content: center;
+  align-items: center;
+  // color: white;
+  background-position: center;
+}
+
+.right-card-content-all-products {
+  max-width: 100%;
+
+  text-align: center;
+  background-color: white;
+
+  padding: 3rem;
 }
 

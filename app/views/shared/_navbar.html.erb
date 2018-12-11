@@ -18,12 +18,11 @@
 
 
     <%= form_tag products_path, method: :get do %>
-    <%= text_field_tag :query,
+      <%= text_field_tag :query,
       params[:query],
       class: "form-control", class: "search",
       placeholder: "Recherchez un soin"%>
-
-     <% end %>
+    <% end %>
 
   </div>
 
