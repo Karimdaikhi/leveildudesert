@@ -6,9 +6,9 @@
     <% end %>
   </div>
 
+
   <!-- Right Navigation -->
   <div class="item-navbar">
-    <% if user_signed_in? %>
     <!-- Links when logged in -->
 
 
@@ -24,10 +24,15 @@
       placeholder: "Recherchez un soin"%>
         <% end %>
      <% end %>
+
   </div>
-  <!-- Links when logged in -->
+
+  <div class="language">
     <%= "Français"  %>
     <%= image_tag "fleche.svg", height: 30 %>
+
+  </div>
+
 
 
   <div class="menu-navbar">
@@ -36,4 +41,7 @@
     <%= link_to "LA MAISON", "#", class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "BLOG", "#", class: "navbar-wagon-item navbar-wagon-link" %>
   </div>
-</div>
+ </div>
+    
+
+

@@ -13,6 +13,8 @@ class ProductsController < ApplicationController
   end
 
   def index
+    @product = Product.last
+
     @profile = Profile.new
 
     @products = Product.all

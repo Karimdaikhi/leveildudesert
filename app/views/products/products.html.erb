@@ -1,20 +1,26 @@
 <h1> Nos soins l'Éveil du désert</h1>
 <div class="container">
   <div class="row">
-    <% @products.each do |p| %>
+    <% @products.each do |product| %>
       <div class="col-xs-12 col-sm-4">
-        <%= link_to p do  %>
-          <div class="epicard box">
-            <%= image_tag p.photo, class: "epicard-image" %>
-            <div class="button-position">
-              <a href="#" class="btn-medium">Découvrir</a>
+
+        <%= link_to(product) do %>
+        <div class="epicard box">
+
+            <div class="epicard-content">
+              <%= image_tag product.photo, class: "epicard-image" %>
+              <div class="product-list-button">
+                <button type="button" class="btn-medium">EN SAVOIR PLUS</button>
+              </div>
+
             </div>
-          </div>
-          <div class="product-description">
-            <h4><%= p.name.capitalize %></h4>
-            <p><%= p.price %> €</p>
-          </div>
-        <% end %>
+
+        </div>
+         <% end %>
+        <div class="product-description">
+          <h4><%= product.name.capitalize %></h4>
+          <p><%= product.price %> €</p>
+        </div>
       </div>
     <% end %>
   </div>
