@@ -7,12 +7,28 @@ height: 100%;
   overflow-y: scroll;
 }
 
+.yellow-background {
+  background-color: #fef7df;
+}
+
+
+.result-background {
+  background-color: none;
+}
+
+.diag-background {
+  background-image: asset-url('cactus.jpg');
+  // background-color: #fef7df;
+}
+
+.home-background {
+ background-image: asset-url('desert.jpg');
+}
+
 .right-card {
-  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), asset-url('desert.jpg');
   display: flex;
   justify-content: center;
   align-items: center;
-  // color: white;
   background-size: cover;
   background-position: center;
 }
