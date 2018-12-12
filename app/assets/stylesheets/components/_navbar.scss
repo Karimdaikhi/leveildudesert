@@ -1,76 +1,84 @@
-/* Main navbar */
-.navbar-wagon {
+.active {
+  color: #F9C73E !important;
+}
+
+.navbar-eveil {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
   transition: all 0.3s ease;
   height: 200px;
-  padding: 0px 30px;
-/*   display: flex;
+  padding: 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between; */
 }
 
-/* Logo */
-.navbar-wagon-brand  {
-height: 100px;
-text-align: center;
+.navbar-logo  {
+  height: 140px;
+  text-align: center;
 }
-.navbar-wagon-brand img {
-height: 140px;
-margin-top: 10px;
+
+.navbar-logo img {
+  height: 130px;
+  padding-top: 10px;
+}
+
+.navbar-menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  padding: 0 5%;
 
 }
 
-.menu-navbar {
-width: 40%;        /* Set the width */
-margin: 0 auto;
-display: flex;
-justify-content: space-between;
+.navbar-language {
+  width: 23%;
 }
 
-.menu-navbar a {
-text-decoration: none;
+.navbar-links {
+  display: flex;
+  justify-content: space-between;
+  width: 39%;
 }
 
-.item-navbar {
-text-align: right;
-}
-
-.navbar-wagon-item {
-  cursor: pointer;
-  padding: 0 20px;
-}
-
-.navbar-wagon-link {
+.link {
+  width: 30%;
+  text-align: center;
   color: black;
-  font-size: 20px;
+  font-size: 18px;
+  text-decoration: none;
 }
 
-.navbar-wagon-link:hover {
+.link:hover {
   text-decoration: none;
   opacity: 1;
   color: #999999;
-
 }
 
-.navbar-wagon-link:active {
+.link:focus {
   text-decoration: none;
   opacity: 1;
   color: #999999;
-
 }
 
-a {
-  text-decoration: none;
-}
-
-.search {
+.navbar-items {
+  width: 23%;
   text-align: left;
-  float: right;
-  padding: 0px;
-  border: none;
-  margin-top: -28px;
-  margin-right: 115px;
-  font-size: 17px;
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+// .search {
+//   text-align: left;
+//   float: right;
+//   padding: 0px;
+//   border: none;
+//   margin-top: -28px;
+//   margin-right: 115px;
+//   font-size: 17px;
+//   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+// }
