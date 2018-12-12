@@ -1,13 +1,20 @@
-<div class="navbar-wagon">
-  <div class= "navbar-wagon-brand">
-    <%= link_to root_path do %>
-      <%= image_tag "logo2.png", height: 50 %>
-    <% end %>
+<div class="navbar-eveil">
+  <div class="navbar-logo">
+  <%= link_to root_path do %>
+    <%= image_tag "logo2.png", height: 50 %>
+  <% end %>
   </div>
-
-
-
-  <div class="item-navbar">
+  <div class="navbar-menu">
+    <div class="navbar-language">
+    <%= "Français"  %>
+    <%= image_tag "fleche.svg", height: 30 %>
+    </div>
+    <div class="navbar-links">
+    <%= link_to "LA MAISON", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "NOS PRODUITS", products_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "VOTRE DIAGNOSTIC", personnalisation_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    </div>
+    <div class="navbar-items">
     <%= image_tag "zoom-2.svg", height: 30 %>
     <%= image_tag "single-01.svg", height: 30 %>
     <%= image_tag "cart-simple.svg", height: 30 %>
@@ -15,18 +22,9 @@
       <%= text_field_tag :query,
       params[:query],
       class: "form-control", class: "search",
-      placeholder: "Recherchez un soin"%>
+      placeholder: "Rechercher un soin"%>
     <% end %>
-  </div>
-
-  <div class="language">
-    <%= "Français"  %>
-    <%= image_tag "fleche.svg", height: 30 %>
-  </div>
-  <div class="menu-navbar">
-    <%= link_to "LA MAISON", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "NOS PRODUITS", products_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "VOTRE DIAGNOSTIC", personnalisation_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    </div>
   </div>
 </div>
 

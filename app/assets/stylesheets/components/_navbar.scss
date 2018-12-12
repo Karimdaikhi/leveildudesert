@@ -1,76 +1,88 @@
-/* Main navbar */
 .navbar-wagon {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
   transition: all 0.3s ease;
   height: 200px;
-  padding: 0px 30px;
-/*   display: flex;
+  padding: 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between; */
 }
 
-/* Logo */
-.navbar-wagon-brand  {
-height: 100px;
-text-align: center;
-}
-.navbar-wagon-brand img {
-height: 140px;
-margin-top: 10px;
-
+.navbar-logo  {
+  height: 140px;
+  text-align: center;
 }
 
-.menu-navbar {
-width: 40%;        /* Set the width */
-margin: 0 auto;
-display: flex;
-justify-content: space-between;
+.navbar-logo img {
+  height: 130px;
+  margin-top: 10px;
 }
 
-.menu-navbar a {
-text-decoration: none;
+.navbar-menu {
+  width: 40%;        /* Set the width */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.item-navbar {
-text-align: right;
-}
-
-.navbar-wagon-item {
-  cursor: pointer;
-  padding: 0 20px;
-}
-
-.navbar-wagon-link {
-  color: black;
-  font-size: 20px;
-}
-
-.navbar-wagon-link:hover {
-  text-decoration: none;
-  opacity: 1;
-  color: #999999;
-
-}
-
-.navbar-wagon-link:active {
-  text-decoration: none;
-  opacity: 1;
-  color: #999999;
-
-}
-
-a {
+.navbar-menu a {
   text-decoration: none;
 }
 
-.search {
-  text-align: left;
-  float: right;
-  padding: 0px;
-  border: none;
-  margin-top: -28px;
-  margin-right: 115px;
-  font-size: 17px;
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+.navbar-language {
+
 }
+
+.navbar-links {
+
+}
+
+.navbar-items {
+
+}
+
+// .item-navbar {
+// text-align: right;
+// }
+
+// .navbar-wagon-item {
+//   cursor: pointer;
+//   padding: 0 20px;
+// }
+
+// .navbar-wagon-link {
+//   color: black;
+//   font-size: 20px;
+// }
+
+// .navbar-wagon-link:hover {
+//   text-decoration: none;
+//   opacity: 1;
+//   color: #999999;
+
+// }
+
+// .navbar-wagon-link:active {
+//   text-decoration: none;
+//   opacity: 1;
+//   color: #999999;
+
+// }
+
+// a {
+//   text-decoration: none;
+// }
+
+// .search {
+//   text-align: left;
+//   float: right;
+//   padding: 0px;
+//   border: none;
+//   margin-top: -28px;
+//   margin-right: 115px;
+//   font-size: 17px;
+//   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+// }
