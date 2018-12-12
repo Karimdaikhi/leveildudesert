@@ -3,7 +3,7 @@
 // }
 
 .full-height-container {
-height: calc(100vh - 182px);
+height: calc(100vh - 200px);
 }
 
 .full-height {
@@ -13,4 +13,8 @@ height: calc(100vh - 182px);
 .non-padded {
   padding-left: 0;
   padding-right: 0;
+}
+
+.almost-full-height {
+  height: 60%;
 }

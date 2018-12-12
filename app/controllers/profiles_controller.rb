@@ -1,6 +1,13 @@
 class ProfilesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:new, :profile_photo, :call_api, :diagnostic, :results]
+  skip_before_action :authenticate_user!, only: [:personnalisation, :new, :profile_photo, :call_api, :diagnostic, :update, :results]
 
+  def personnalisation
+    @product = Product.last
+
+    @profile = Profile.new
+
+    @products = Product.all
+  end
 
   def profile_photo
     @profile = Profile.new(profile_params)
@@ -9,7 +16,7 @@ class ProfilesController < ApplicationController
       call_api
       redirect_to diagnostic_path
     else
-      render 'products/index'
+      render 'profiles/personnalisation'
     end
   end
 

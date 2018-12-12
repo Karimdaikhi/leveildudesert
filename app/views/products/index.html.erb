@@ -1,40 +1,6 @@
-<div class="container-fluid full-height-container">
-  <div class="row non-padded full-height">
-    <div class="col-xs-12 col-sm-6 non-padded full-height">
-      <div class="left-card">
-        <div class="row non-padded full-height">
-          <div class="col-xs-12 col-sm-6 non-padded full-height">
-            <div class="product-star-picture">
-              <%= image_tag @product.photo %>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 non-padded full-height">
-            <div class="product-star-content">
-              <h3 id="title-star-product"><%= @product.name.upcase %></h3>
-            <br>
-            <p><%= @product.price %> €</p>
-            <br>
-            <%= link_to 'EN SAVOIR PLUS', @product, class:"btn-medium" %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-6 non-padded full-height">
-      <div class="right-card">
-        <div class="right-card-content">
-          <h1>NOUVEAUTÉ</h1>
-          <p>Trouvez votre produit via un diagnostic personnalisé. Veuillez télécharger une photo depuis votre ordinateur.<br><br></p>
-          <%= simple_form_for @profile, :url => profile_photo_path, :method => :post  do |f| %>
-            <%= f.input :photo, label: "Charger ma photo" %>
-            <%= f.input :photo_cache, as: :hidden %>
-            <%= f.button :submit, "GO !", class: 'btn-medium' %>
-          <% end %>
-        </div>
-      </div>
+<div class="container-video">
+  <video class="my-video" muted="true" loop="" autoplay="true" src="/Dunes.mp4" poster="/Dunes.mp4" onloadeddata=" objectFitVideos(); loadedVideo()" style="z-index: 2;"></video>
+  <div class="overlay">
+        <img src="logo2.png" alt="Eveil du desert" style="height: 75px; width: 300px;" />
     </div>
   </div>
-</div>
-
-
-
