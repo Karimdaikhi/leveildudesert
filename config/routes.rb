@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'products#index'
   resources :products, only: [:show, :edit, :update]
   get '/products', to: 'products#products'
+  get '/personnalisation', to: 'profiles#personnalisation'
   post '/profile_photo', to: 'profiles#profile_photo'
   get '/diagnostic', to: 'profiles#diagnostic', as: :diagnostic
   patch '/profile_complete', to: 'profiles#update'
