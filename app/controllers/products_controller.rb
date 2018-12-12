@@ -3,6 +3,9 @@ require "csv"
 class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show, :products]
 
+  def index
+  end
+
   def products
     @products = Product.all
     if params[:query].present?
@@ -10,15 +13,6 @@ class ProductsController < ApplicationController
     else
       @products = Product.all
     end
-  end
-
-  def index
-    @product = Product.last
-
-    @profile = Profile.new
-
-    @products = Product.all
-
   end
 
   def show
@@ -42,11 +36,4 @@ class ProductsController < ApplicationController
   # def profile_params
   #   params.require(:profile).permit(:photo)
   # end
-
-
-
-
-
-
-
 end
