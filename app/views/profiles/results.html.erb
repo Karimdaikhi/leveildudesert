@@ -13,7 +13,9 @@
             <div class="product-star-content">
             <h3 id="title-star-product"><%= product.name %></h3>
             <br>
-              <p><%= product.price %> €</p>
+            <p><%= product.description.truncate(80) %></p>
+            <br>
+            <p><%= product.price %> €</p>
             <br>
             <%= link_to 'Découvrir', product, class:"btn-medium" %>
             </div>

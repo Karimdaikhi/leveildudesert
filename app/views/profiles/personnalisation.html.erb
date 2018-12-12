@@ -8,11 +8,16 @@
               <%= image_tag @product.photo %>
             </div>
           </div>
+          <!-- #E7AD42 -->
           <div class="col-xs-12 col-sm-6 non-padded full-height">
             <div class="product-star-content">
+              <h3 style="color:#F9C73E;"><b>SOIN DU MOMENT</b></h3>
+              <br><br>
               <h3 id="title-star-product"><%= @product.name.upcase %></h3>
               <br>
-                <p><%= @product.price %> €</p>
+              <p><%= @product.description.truncate(80) %></p>
+              <br>
+               <p><%= @product.price %> €</p>
               <br>
               <%= link_to 'Découvrir', @product, class:"btn-medium" %>
             </div>
@@ -21,7 +26,7 @@
       </div>
     </div>
     <div class="col-xs-12 col-sm-6 non-padded full-height">
-      <div class="right-card">
+      <div class="right-card home-background">
         <div class="right-card-content">
           <h1>NOUVEAUTÉ</h1>
           <p>Trouvez votre soin adapté grâce à notre diagnostic. <br> Ajoutez votre plus beau selfie.<br><br></p>
