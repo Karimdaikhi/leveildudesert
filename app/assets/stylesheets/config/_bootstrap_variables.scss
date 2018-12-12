@@ -51,3 +51,8 @@ $border-radius-small: 2px;
 }
 
 // Override other variables below!
+
+a:hover, a:focus {
+  color: #999999;
+  text-decoration: none;
+}

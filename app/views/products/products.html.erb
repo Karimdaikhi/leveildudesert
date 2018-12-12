@@ -18,11 +18,15 @@
         </div>
          <% end %>
         <div class="product-description">
-          <h4><%= product.name.capitalize %></h4>
+          <h4><%= product.name %></h4>
             <p><%= product.price %> €</p>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+
+<%= content_for :products_link do %>
+  active
+<% end %>
 
