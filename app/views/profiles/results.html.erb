@@ -27,17 +27,25 @@
     <div class="col-xs-12 col-sm-6 non-padded full-height">
       <div class="right-card result-background">
         <div class="right-card-content diagnostic">
-         <h3 id="title-diagnostic">Ma prescription beauté personnalisée</h1>
+         <h3 id="title-diagnostic" style="text-align: left;">Récapitulatif</h3>
+          <br>
          <p>Vous êtes  un(e) <b><%= @h[@profile.sexe.to_sym] %></b> de <b><%= @profile.age %></b> ans
          <p>Votre ethnicité : <b><%= @h[@profile.ethnicity.to_sym] %></b></p>
          <p> Votre type de peau : <b><%= @profile.skin_type %></b></p>
-         <p> Vous recherchez un soin pour votre  <b><%= @profile.body_zone %></b></p>
+         <p> Vous recherchez un soin pour : <b><%= @profile.body_zone %></b></p>
+         <br>
+         <h3>L'Eveil du Désert a selectionné pour vous la gamme de soins suivante :</h3>
         </div>
       </div>
     </div>
   </div>
 </div>
 <!-- The video -->
+
+<%= content_for :diag_link do %>
+  active
+<% end %>
+
 
 
 

@@ -2,11 +2,8 @@
   <div class="row non-padded full-height">
     <div class="col-xs-12 col-sm-6 non-padded full-height">
       <div class="left-card-products">
-
-            <div class="product-show-picture">
-              <%= image_tag @product.photo %>
-
-
+        <div class="product-show-picture">
+          <%= image_tag @product.photo %>
         </div>
       </div>
     </div>
@@ -14,16 +11,15 @@
       <div class="right-card-products">
         <div class="right-card-content-all-products">
           <br>
-    <h3 style="color:#F9C73E;" ><%= @product.name.upcase %></h3>
-      <br>
-            <h4><%= @product.body_zone %> / <%= @product.skin_type  %></h4>
-      <br>
-      <h4><%= @product.description %></h4>
-      <br>
-
-            <p><%= @product.price %> €</p>
-      <br>
-      <a href="#" class="btn-medium" style="text-align: center; text-decoration: none; margin : 30px; display: flex; justify-content: space-around">Ajouter au panier</a>
+          <h3 style="color:#F9C73E;" ><%= @product.name.upcase %></h3>
+          <br>
+          <h4><%= @product.body_zone %> / <%= @product.skin_type  %></h4>
+          <br>
+          <h4><%= @product.description %></h4>
+          <br>
+          <p><%= @product.price %> €</p>
+          <br>
+          <a href="#" class="btn-medium" style="text-align: center; text-decoration: none; margin : 10px; display: flex; justify-content: space-around">Ajouter au panier</a>
         </div>
       </div>
     </div>

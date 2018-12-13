@@ -4,8 +4,10 @@
 @import "cards";
 @import "button";
 
+// #EAF5F7
+
 .loader {
-  background-color: #EAF5F7;
+  background-color: white;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -16,7 +18,7 @@
 }
 
 .loader img {
-  margin-top: 20vh;
+  margin-top: 9vh;
 }
 
 

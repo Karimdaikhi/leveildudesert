@@ -1,7 +1,8 @@
 import $ from 'jquery';
 
-$(document).ready(function() {
+// $(document).ready(function() {
  $(window).on('load', function() {
-   $(".loader").delay(3500).fadeOut(500);
+  console.log('!!!! we are in diag on load');
+   $(".loader").delay(3700).fadeOut(500);
  });
-});
+// });
