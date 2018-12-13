@@ -27,6 +27,14 @@ class ProductsController < ApplicationController
     @product.save
   end
 
+  def reservation
+    @product = Product.find(params[:id])
+  end
+
+  def sendmail
+
+  end
+
   # private
 
   def product_params
