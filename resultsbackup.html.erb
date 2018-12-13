@@ -1,3 +1,7 @@
+
+<%= number_to_percentage(XXX * 100, precision: 2)%>
+
+
 <div class="loader">
   <%= image_tag('scan.gif') %>
 </div>
@@ -27,17 +31,20 @@
         <div class="right-card-content diagnostic">
           <h3 id="title-diagnostic">VOTRE DIAGNOSTIC</h1>
           <br> <br>
-          <p class="active"><b><%= @h[@profile.sexe.to_sym] %>,
-          Probabilité: <%= number_to_percentage(session[:sexes][0]["value"] * 100, precision: 2)%></b></p>
-          <p><%= @h[session[:sexes][1]["name"].to_sym] %>, Probabilité: <%= number_to_percentage(session[:sexes][1]["value"] * 100, precision: 2)%></p>
+          <p><b><%= @h[@profile.sexe.to_sym] %>,
+
+<%= number_to_percentage(session[:sexes][0]["value"] * 100, precision: 2)%>,
+
+          Probabilité: <%= session[:sexes][0]["value"] %></b></p>
+          <p><%= @h[session[:sexes][1]["name"].to_sym] %>, Probabilité: <%= session[:sexes][1]["value"] %></p>
           <br>
-          <p class="active"> <b> <%= @profile.age %> ans, Probabilité: <%= number_to_percentage(session[:ages][0]["value"] * 100, precision: 2)%></b></p>
-          <p> <%= session[:ages][1]["name"] %> ans, Probabilité: <%= number_to_percentage(session[:ages][1]["value"] * 100, precision: 2)%></p>
-          <p><%= session[:ages][2]["name"] %> ans, Probabilité: <%= number_to_percentage(session[:ages][2]["value"] * 100, precision: 2)%></p>
+          <p> <b> <%= @profile.age %> ans, Probabilité: <%= session[:ages][0]["value"] %> </b></p>
+          <p> <%= session[:ages][1]["name"] %> ans, Probabilité: <%= session[:ages][1]["value"] %></p>
+          <p><%= session[:ages][2]["name"] %> ans, Probabilité: <%= session[:ages][2]["value"] %></p>
           <br>
-          <p class="active"><b><%= @h[@profile.ethnicity.to_sym] %>, Probabilité: <%= number_to_percentage(session[:ethnicities][0]["value"] * 100, precision: 2)%></b></p>
-          <p><%= @h[session[:ethnicities][1]["name"].to_sym] %>, Probabilité: <%= number_to_percentage(session[:ethnicities][1]["value"] * 100, precision: 2)%></p>
-          <p><%= @h[session[:ethnicities][2]["name"].to_sym] %>, Probabilité: <%= number_to_percentage(session[:ethnicities][2]["value"] * 100, precision: 2)%></p>
+          <p><b><%= @h[@profile.ethnicity.to_sym] %>, Probabilité: <%= session[:ethnicities][0]["value"] %></b></p>
+          <p><%= @h[session[:ethnicities][1]["name"].to_sym] %>, Probabilité: <%= session[:ethnicities][1]["value"] %></p>
+          <p><%= @h[session[:ethnicities][2]["name"].to_sym] %>, Probabilité: <%= session[:ethnicities][2]["value"] %></p>
           <br><br>
           <%= simple_form_for @profile, :url => profile_complete_path, :method => :patch  do |f| %>
             <%= f.input :body_zone, label: 'Je cherche un soin pour :', collection: ['Visage','Corps','Mains','Buste'], :input_html => { :class => 'select2',} %>
