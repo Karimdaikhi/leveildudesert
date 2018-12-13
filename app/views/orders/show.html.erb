@@ -1,42 +1,53 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @order.name %>
-</p>
-
-<p>
-  <strong>Firstname:</strong>
-  <%= @order.firstname %>
-</p>
-
-<p>
-  <strong>Adress:</strong>
-  <%= @order.adress %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @order.city %>
-</p>
-
-<p>
-  <strong>Zipcode:</strong>
-  <%= @order.zipcode %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= @order.comment %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @order.email %>
-</p>
-
-<p>
-  <strong>Product:</strong>
-  <%= @order.product %>
-</p>
-
+<!-- <p id="notice"><%= notice %></p> -->
+<div class="container-fluid full-height-container">
+  <div class="row non-padded full-height">
+    <div class="col-xs-12 col-sm-6 non-padded full-height">
+      <div class="left-card">
+        <div class="row non-padded full-height">
+          <div class="col-xs-12 col-sm-6 non-padded full-height">
+            <div class="product-star-picture">
+              <%= image_tag @product.photo %>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 non-padded full-height">
+            <div class="product-star-content">
+              <h3 style="color:#F9C73E;"><b>VOTRE PRODUIT</b></h3>
+              <br><br>
+              <h3 id="title-star-product"><%= @product.name.upcase %></h3>
+              <br>
+              <p><%= @product.description.truncate(70) %></p>
+              <br>
+              <p><%= @product.price %> €</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 non-padded full-height">
+      <div class="right-card diag-background">
+        <div class="right-card-content diagnostic">
+          <h3 id="title-diagnostic">PRÉCOMMANDE ENREGISTRÉE</h1>
+          <br><br>
+          <p>
+            <strong>Nom et Prénom :</strong>
+            <%= @order.name %>
+          </p>
+          <p>
+            <strong>Adresse :</strong>
+            <%= @order.adress %>
+          </p>
+          <p>
+            <strong>Code Postal :</strong>
+            <%= @order.zipcode %>
+          </p>
+          <p>
+            <strong>Email :</strong>
+            <%= @order.email %>
+          </p>
+          <br><br>
+          <h3>L'Éveil du Désert vous remercie</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

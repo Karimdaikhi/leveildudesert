@@ -1,5 +1,44 @@
-<h1>New Order</h1>
-
-<%= render 'form', order: @order %>
-
-
+<div class="container-fluid full-height-container">
+  <div class="row non-padded full-height">
+    <div class="col-xs-12 col-sm-6 non-padded full-height">
+      <div class="left-card">
+        <div class="row non-padded full-height">
+          <div class="col-xs-12 col-sm-6 non-padded full-height">
+            <div class="product-star-picture">
+              <%= image_tag @product.photo %>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 non-padded full-height">
+            <div class="product-star-content">
+              <h3 style="color:#F9C73E;"><b>VOTRE PRODUIT</b></h3>
+              <br><br>
+              <h3 id="title-star-product"><%= @product.name.upcase %></h3>
+              <br>
+              <p><%= @product.description.truncate(70) %></p>
+              <br>
+              <p><%= @product.price %> €</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 non-padded full-height">
+      <div class="right-card diag-background">
+        <div class="right-card-content diagnostic">
+          <h3 id="title-diagnostic">VOTRE COMMANDE</h1>
+          <br> <br>
+          <%= simple_form_for(@order, url: product_orders_path) do |f| %>
+            <%= f.error_notification %>
+            <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+            <%= f.input :name, label: "Nom et Prénom" %>
+            <%= f.input :adress, label: "Adresse" %>
+            <%= f.input :zipcode, label: "Code Postal" %>
+            <%= f.input :email, label: "Email" %>
+            <%= f.input :product_id, as: :hidden, input_html: {value: @product.id} %>
+            <%= f.button :submit, "Précommander", class: 'btn-medium' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

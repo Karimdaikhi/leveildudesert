@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:new, :show, :create]
 
   # GET /orders
   # GET /orders.json
@@ -10,6 +11,7 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
+    @product = Product.find(params[:product_id])
   end
 
   # GET /orders/new
@@ -29,7 +31,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to product_order_path(@order.product, @order), notice: 'Order was successfully created.' }
+        format.html { redirect_to product_order_path(@order.product, @order), notice: 'Votre précommande a bien été enregistrée.' }
         format.json { render :show, status: :created, location: @order }
       else
         p @order.errors.inspect
