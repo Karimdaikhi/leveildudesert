@@ -2,11 +2,12 @@
   <div class="navbar-logo">
     <%= link_to root_path do %>
       <%= image_tag "logo1.png", height: 50 %>
-    <% end %>
+      <% end %>
   </div>
   <div class="navbar-menu font">
     <div class="navbar-language">
       <%= "Français" %>
+      <%= image_tag "fleche.svg", height: 30 %>
     </div>
     <div class="navbar-links font">
       <%= link_to "LA MAISON", root_path, class: "link #{content_for :house_link}"%>
